@@ -162,10 +162,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2021r2-patch3-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -195,10 +197,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2021r2-patch3-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -226,10 +230,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -259,10 +265,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/riscv32-esp-elf/esp-2021r2-patch3-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -290,10 +298,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2021r2-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -323,10 +333,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2021r2-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -354,10 +366,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/riscv32-esp-elf/esp-2021r2-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -387,10 +401,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/riscv32-esp-elf/esp-2021r2-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -418,10 +434,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2021r1-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -451,10 +469,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2021r1-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -482,10 +502,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/riscv32-esp-elf/esp-2021r1-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -515,10 +537,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/riscv32-esp-elf/esp-2021r1-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -546,10 +570,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2020r3-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -579,10 +605,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2020r3-8.4.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -610,10 +638,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2019r2-8.2.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -643,10 +673,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2019r2-8.2.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -674,10 +706,12 @@
             },
             "compilerPath": "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/1.22.0-80-g6c4433a-5.2.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         },
@@ -707,10 +741,12 @@
             },
             "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/1.22.0-80-g6c4433a-5.2.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
             "compilerArgs": [
-                "-DIDF_TARGET=${config:idf.adapterTargetName}"
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
             ],
             "defines": [
-                "IDF_TARGET=${config:idf.adapterTargetName}"
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
             ],
             "intelliSenseMode": "gcc-x86"
         }
