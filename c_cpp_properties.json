@@ -31,7 +31,7 @@
         "xtensaIncludePath": [
             "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/include/**",
             "${config:idf.espIdfPath}/components/xtensa/${config:idf.adapterTargetName}/**",
-            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos",
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos"
         ],
         "xtensaIncludePathWin": [
             "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/include/**",
