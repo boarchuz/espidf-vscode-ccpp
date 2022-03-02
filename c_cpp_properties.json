@@ -91,6 +91,7 @@
             "${config:idf.espIdfPath}/components/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPath}/components/esp_common/include/**",
             "${config:idf.espIdfPath}/components/log/**",
+            "${config:idf.espIdfPath}/components/esp_event/include/**",
             "${config:idf.espIdfPath}/components/**"
         ],
         "idfIncludePathWin": [
@@ -104,6 +105,7 @@
             "${config:idf.espIdfPathWin}/components/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPathWin}/components/esp_common/include/**",
             "${config:idf.espIdfPathWin}/components/log/**",
+            "${config:idf.espIdfPathWin}/components/esp_event/include/**",
             "${config:idf.espIdfPathWin}/components/**"
         ],
         "idfBrowsePath": [
@@ -117,6 +119,7 @@
             "${config:idf.espIdfPath}/components/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPath}/components/esp_common/include",
             "${config:idf.espIdfPath}/components/log",
+            "${config:idf.espIdfPath}/components/esp_event/include",
             "${config:idf.espIdfPath}/components"
         ],
         "idfBrowsePathWin": [
@@ -130,6 +133,7 @@
             "${config:idf.espIdfPathWin}/components/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPathWin}/components/esp_common/include",
             "${config:idf.espIdfPathWin}/components/log",
+            "${config:idf.espIdfPathWin}/components/esp_event/include",
             "${config:idf.espIdfPathWin}/components"
         ]
     },
