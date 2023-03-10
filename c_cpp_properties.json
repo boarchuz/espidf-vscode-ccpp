@@ -31,7 +31,8 @@
         "xtensaIncludePath": [
             "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/include/**",
             "${config:idf.espIdfPath}/components/xtensa/${config:idf.adapterTargetName}/**",
-            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos"
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos",
+            "${config:idf.espIdfPath}/components/ulp/ulp_common/include/${config:idf.adapterTargetName}/**"
         ],
         "xtensaIncludePathWin": [
             "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/include/**",
@@ -81,8 +82,12 @@
             "${workspaceFolder}/bootloader_components"
         ],
         "idfIncludePath": [
-            "${config:idf.espIdfPath}/components/freertos/**",
+            "${config:idf.espIdfPath}/components/soc/${config:idf.adapterTargetName}/**",
+            "${config:idf.espIdfPath}/components/freertos/esp-additions/include/**",
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/**",
             "${config:idf.espIdfPath}/components/esp_timer/**",
+            "${config:idf.espIdfPath}/components/esp_app_format/**",
+            "${config:idf.espIdfPath}/components/spi_flash/include/**",
             "${config:idf.espIdfPath}/components/esp_hw_support/port/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPath}/components/driver/${config:idf.adapterTargetName}/include/**",
             "${config:idf.espIdfPath}/components/soc/${config:idf.adapterTargetName}/include/**",
