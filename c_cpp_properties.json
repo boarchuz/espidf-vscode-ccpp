@@ -144,6 +144,144 @@
     },
     "configurations": [
         {
+            "name": "ESP-IDF [Xtensa | esp-12.2.0_20230208]",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "forcedInclude": [
+                "${workspaceFolder}/build/config/sdkconfig.h",
+                "${config:idf.espIdfPath}/components/freertos/esp-additions/include/freertos/FreeRTOSConfig.h",
+                "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOSConfig.h"
+            ],
+            "includePath": [
+                "${env:configAdditionalIncludePath}",
+                "${env:xtensaIncludePath}",
+                "${env:workspaceIncludePath}",
+                "${env:idfIncludePath}"
+            ],
+            "browse": {
+                "path": [
+                    "${env:configAdditionalBrowsePath}",
+                    "${env:xtensaBrowsePath}",
+                    "${env:workspaceBrowsePath}",
+                    "${env:idfBrowsePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "${config:idf.toolsPath}/tools/xtensa-esp32-elf/esp-12.2.0_20230208/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
+            "compilerArgs": [
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
+            ],
+            "defines": [
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
+            ],
+            "intelliSenseMode": "gcc-x86"
+        },
+        {
+            "name": "ESP-IDF Windows [Xtensa | esp-12.2.0_20230208]",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "forcedInclude": [
+                "${workspaceFolder}/build/config/sdkconfig.h"
+            ],
+            "includePath": [
+                "${env:configAdditionalIncludePath}",
+                "${env:xtensaIncludePathWin}",
+                "${env:workspaceIncludePath}",
+                "${env:idfIncludePathWin}",
+                "${configMsys2RootPathWin}/usr/include/**"
+            ],
+            "browse": {
+                "path": [
+                    "${env:configAdditionalBrowsePath}",
+                    "${env:xtensaBrowsePathWin}",
+                    "${env:workspaceBrowsePath}",
+                    "${env:idfIncludePathWin}",
+                    "${configMsys2RootPathWin}/usr/include"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-12.2.0_20230208/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
+            "compilerArgs": [
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__XTENSA__"
+            ],
+            "defines": [
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__XTENSA__"
+            ],
+            "intelliSenseMode": "gcc-x86"
+        },
+        {
+            "name": "ESP-IDF [RISCV32 | esp-12.2.0_20230208]",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "forcedInclude": [
+                "${workspaceFolder}/build/config/sdkconfig.h"
+            ],
+            "includePath": [
+                "${env:configAdditionalIncludePath}",
+                "${env:riscvIncludePath}",
+                "${env:workspaceIncludePath}",
+                "${env:idfIncludePath}"
+            ],
+            "browse": {
+                "path": [
+                    "${env:configAdditionalBrowsePath}",
+                    "${env:riscvBrowsePath}",
+                    "${env:workspaceBrowsePath}",
+                    "${env:idfBrowsePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "${config:idf.toolsPath}/tools/riscv32-esp-elf/esp-12.2.0_20230208/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
+            "compilerArgs": [
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
+            ],
+            "defines": [
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
+            ],
+            "intelliSenseMode": "gcc-x86"
+        },
+        {
+            "name": "ESP-IDF Windows [RISCV32 | esp-12.2.0_20230208]",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "forcedInclude": [
+                "${workspaceFolder}/build/config/sdkconfig.h"
+            ],
+            "includePath": [
+                "${env:configAdditionalIncludePath}",
+                "${env:riscvIncludePathWin}",
+                "${env:workspaceIncludePath}",
+                "${env:idfIncludePathWin}",
+                "${configMsys2RootPathWin}/usr/include/**"
+            ],
+            "browse": {
+                "path": [
+                    "${env:configAdditionalBrowsePath}",
+                    "${env:riscvBrowsePathWin}",
+                    "${env:workspaceBrowsePath}",
+                    "${env:idfIncludePathWin}",
+                    "${configMsys2RootPathWin}/usr/include"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "${config:idf.toolsPathWin}/tools/riscv32-esp-elf/esp-12.2.0_20230208/riscv32-esp-elf/bin/riscv32-esp-elf-gcc.exe",
+            "compilerArgs": [
+                "-DIDF_TARGET=${config:idf.adapterTargetName}",
+                "-D__riscv"
+            ],
+            "defines": [
+                "IDF_TARGET=${config:idf.adapterTargetName}",
+                "__riscv"
+            ],
+            "intelliSenseMode": "gcc-x86"
+        },
+        {
             "name": "ESP-IDF [Xtensa | esp-2022r1-RC1-11.2.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
