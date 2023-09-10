@@ -20,6 +20,9 @@
             "           Tag Parser",
             "               If using the Tag Parser engine, add your additional paths to configAdditionalBrowsePath instead.",
             "               These will be searched recursively by default. Append /* to include only headers within the specified directory.",
+            "Notes",
+            "       - Intellisense mode is set to 'windows-gcc-x86' as all current options define platform-specific macros (eg. __APPLE__, WIN32, __linux),",
+            "         and Windows definitions are the least disruptive to Intellisense for ESP-IDF.",
             "References",
             "       Schema:                         https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference                            ",
             "       ESP-IDF Extension Reference:    https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/C_CPP_CONFIGURATION.md       "
@@ -28,61 +31,76 @@
         "configAdditionalBrowsePath": [],
         "configMsys2RootPathWin": "C:/msys32",
         "DEFAULTS": "DO NOT EDIT BELOW   **********************   DO NOT EDIT BELOW   **********************   DO NOT EDIT BELOW",
+        "forcedIncludePath": [
+            "${config:idf.buildPath}/config/sdkconfig.h"
+        ],
         "xtensaIncludePath": [
             "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/include/**",
-            "${config:idf.espIdfPath}/components/xtensa/${config:idf.adapterTargetName}/**",
-            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos",
+            "${config:idf.espIdfPath}/components/xtensa/${config:idf.adapterTargetName}/include/**",
+            "${config:idf.espIdfPath}/components/freertos/port/xtensa/include/**",
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/**",
             "${config:idf.espIdfPath}/components/ulp/ulp_common/include/${config:idf.adapterTargetName}/**"
         ],
         "xtensaIncludePathWin": [
             "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/include/**",
-            "${config:idf.espIdfPathWin}/components/xtensa/${config:idf.adapterTargetName}/**",
-            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos"
+            "${config:idf.espIdfPathWin}/components/xtensa/${config:idf.adapterTargetName}/include/**",
+            "${config:idf.espIdfPathWin}/components/freertos/port/xtensa/include/**",
+            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/**",
+            "${config:idf.espIdfPathWin}/components/ulp/ulp_common/include/${config:idf.adapterTargetName}/**"
         ],
         "xtensaBrowsePath": [
             "${config:idf.toolsPath}/tools/xtensa-${config:idf.adapterTargetName}-elf/include",
-            "${config:idf.espIdfPath}/components/xtensa/${config:idf.adapterTargetName}",
-            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos"
+            "${config:idf.espIdfPath}/components/xtensa/${config:idf.adapterTargetName}/include",
+            "${config:idf.espIdfPath}/components/freertos/port/xtensa/include",
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include",
+            "${config:idf.espIdfPath}/components/ulp/ulp_common/include/${config:idf.adapterTargetName}"
         ],
         "xtensaBrowsePathWin": [
             "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/include",
-            "${config:idf.espIdfPathWin}/components/xtensa/${config:idf.adapterTargetName}",
-            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos"
+            "${config:idf.espIdfPathWin}/components/xtensa/${config:idf.adapterTargetName}/include",
+            "${config:idf.espIdfPathWin}/components/freertos/port/xtensa/include",
+            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/xtensa/include",
+            "${config:idf.espIdfPathWin}/components/ulp/ulp_common/include/${config:idf.adapterTargetName}"
         ],
         "riscvIncludePath": [
             "${config:idf.toolsPath}/tools/riscv32-esp-elf/include/**",
-            "${config:idf.espIdfPath}/components/riscv/**",
-            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos"
+            "${config:idf.espIdfPath}/components/riscv/include/**",
+            "${config:idf.espIdfPath}/components/freertos/port/riscv/include/**",
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/riscv/include/**"
         ],
         "riscvIncludePathWin": [
             "${config:idf.toolsPathWin}/tools/riscv32-esp-elf/include/**",
-            "${config:idf.espIdfPathWin}/components/riscv/**",
-            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos"
+            "${config:idf.espIdfPathWin}/components/riscv/include/**",
+            "${config:idf.espIdfPathWin}/components/freertos/port/riscv/include/**",
+            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/riscv/include/**"
         ],
         "riscvBrowsePath": [
             "${config:idf.toolsPath}/tools/riscv32-esp-elf/include",
-            "${config:idf.espIdfPath}/components/riscv",
-            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos"
+            "${config:idf.espIdfPath}/components/riscv/include",
+            "${config:idf.espIdfPath}/components/freertos/port/riscv/include",
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/portable/riscv/include"
         ],
         "riscvBrowsePathWin": [
             "${config:idf.toolsPathWin}/tools/riscv32-esp-elf/include",
-            "${config:idf.espIdfPathWin}/components/riscv",
-            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/riscv/include/freertos"
+            "${config:idf.espIdfPathWin}/components/riscv/include",
+            "${config:idf.espIdfPathWin}/components/freertos/port/riscv/include",
+            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/portable/riscv/include"
         ],
         "workspaceIncludePath": [
-            "${workspaceFolder}/build/config",
+            "${config:idf.buildPath}/config",
             "${workspaceFolder}/main/**",
             "${workspaceFolder}/components/**",
             "${workspaceFolder}/bootloader_components/**"
         ],
         "workspaceBrowsePath": [
-            "${workspaceFolder}/build/config",
+            "${config:idf.buildPath}/config",
             "${workspaceFolder}/main",
             "${workspaceFolder}/components",
             "${workspaceFolder}/bootloader_components"
         ],
         "idfIncludePath": [
             "${config:idf.espIdfPath}/components/soc/${config:idf.adapterTargetName}/**",
+            "${config:idf.espIdfPath}/components/freertos/port/xtensa/include/**",
             "${config:idf.espIdfPath}/components/freertos/esp-additions/include/**",
             "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/**",
             "${config:idf.espIdfPath}/components/esp_timer/**",
@@ -92,7 +110,6 @@
             "${config:idf.espIdfPath}/components/driver/${config:idf.adapterTargetName}/include/**",
             "${config:idf.espIdfPath}/components/soc/${config:idf.adapterTargetName}/include/**",
             "${config:idf.espIdfPath}/components/hal/${config:idf.adapterTargetName}/include/**",
-            "${config:idf.espIdfPath}/components/esp_hw_support/port/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPath}/components/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPath}/components/esp_common/include/**",
             "${config:idf.espIdfPath}/components/log/**",
@@ -100,13 +117,17 @@
             "${config:idf.espIdfPath}/components/**"
         ],
         "idfIncludePathWin": [
-            "${config:idf.espIdfPathWin}/components/freertos/**",
+            "${config:idf.espIdfPathWin}/components/soc/${config:idf.adapterTargetName}/**",
+            "${config:idf.espIdfPathWin}/components/freertos/port/xtensa/include/**",
+            "${config:idf.espIdfPathWin}/components/freertos/esp-additions/include/**",
+            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel/**",
             "${config:idf.espIdfPathWin}/components/esp_timer/**",
+            "${config:idf.espIdfPathWin}/components/esp_app_format/**",
+            "${config:idf.espIdfPathWin}/components/spi_flash/include/**",
             "${config:idf.espIdfPathWin}/components/esp_hw_support/port/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPathWin}/components/driver/${config:idf.adapterTargetName}/include/**",
             "${config:idf.espIdfPathWin}/components/soc/${config:idf.adapterTargetName}/include/**",
             "${config:idf.espIdfPathWin}/components/hal/${config:idf.adapterTargetName}/include/**",
-            "${config:idf.espIdfPathWin}/components/esp_hw_support/port/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPathWin}/components/${config:idf.adapterTargetName}/**",
             "${config:idf.espIdfPathWin}/components/esp_common/include/**",
             "${config:idf.espIdfPathWin}/components/log/**",
@@ -114,13 +135,17 @@
             "${config:idf.espIdfPathWin}/components/**"
         ],
         "idfBrowsePath": [
-            "${config:idf.espIdfPath}/components/freertos",
+            "${config:idf.espIdfPath}/components/soc/${config:idf.adapterTargetName}",
+            "${config:idf.espIdfPath}/components/freertos/port/xtensa/include",
+            "${config:idf.espIdfPath}/components/freertos/esp-additions/include",
+            "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel",
             "${config:idf.espIdfPath}/components/esp_timer",
+            "${config:idf.espIdfPath}/components/esp_app_format",
+            "${config:idf.espIdfPath}/components/spi_flash/include",
             "${config:idf.espIdfPath}/components/esp_hw_support/port/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPath}/components/driver/${config:idf.adapterTargetName}/include",
             "${config:idf.espIdfPath}/components/soc/${config:idf.adapterTargetName}/include",
             "${config:idf.espIdfPath}/components/hal/${config:idf.adapterTargetName}/include",
-            "${config:idf.espIdfPath}/components/esp_hw_support/port/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPath}/components/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPath}/components/esp_common/include",
             "${config:idf.espIdfPath}/components/log",
@@ -128,13 +153,17 @@
             "${config:idf.espIdfPath}/components"
         ],
         "idfBrowsePathWin": [
-            "${config:idf.espIdfPathWin}/components/freertos",
+            "${config:idf.espIdfPathWin}/components/soc/${config:idf.adapterTargetName}",
+            "${config:idf.espIdfPathWin}/components/freertos/port/xtensa/include",
+            "${config:idf.espIdfPathWin}/components/freertos/esp-additions/include",
+            "${config:idf.espIdfPathWin}/components/freertos/FreeRTOS-Kernel",
             "${config:idf.espIdfPathWin}/components/esp_timer",
+            "${config:idf.espIdfPathWin}/components/esp_app_format",
+            "${config:idf.espIdfPathWin}/components/spi_flash/include",
             "${config:idf.espIdfPathWin}/components/esp_hw_support/port/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPathWin}/components/driver/${config:idf.adapterTargetName}/include",
             "${config:idf.espIdfPathWin}/components/soc/${config:idf.adapterTargetName}/include",
             "${config:idf.espIdfPathWin}/components/hal/${config:idf.adapterTargetName}/include",
-            "${config:idf.espIdfPathWin}/components/esp_hw_support/port/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPathWin}/components/${config:idf.adapterTargetName}",
             "${config:idf.espIdfPathWin}/components/esp_common/include",
             "${config:idf.espIdfPathWin}/components/log",
@@ -146,11 +175,9 @@
         {
             "name": "ESP-IDF [Xtensa | esp-12.2.0_20230208]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++23",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h",
-                "${config:idf.espIdfPath}/components/freertos/esp-additions/include/freertos/FreeRTOSConfig.h",
-                "${config:idf.espIdfPath}/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOSConfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -176,14 +203,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [Xtensa | esp-12.2.0_20230208]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++23",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -211,14 +238,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [RISCV32 | esp-12.2.0_20230208]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++23",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -244,14 +271,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [RISCV32 | esp-12.2.0_20230208]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++23",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -279,14 +306,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
-            "name": "ESP-IDF [Xtensa | esp-2022r1-RC1-11.2.0]",
+            "name": "ESP-IDF [Xtensa | esp-2022r1-11.2.0]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++20",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -303,7 +330,7 @@
                 ],
                 "limitSymbolsToIncludedHeaders": false
             },
-            "compilerPath": "${config:idf.toolsPath}/tools/xtensa-esp32-elf/esp-2022r1-RC1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
+            "compilerPath": "${config:idf.toolsPath}/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
             "compilerArgs": [
                 "-DIDF_TARGET=${config:idf.adapterTargetName}",
                 "-D__XTENSA__"
@@ -312,14 +339,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
-            "name": "ESP-IDF Windows [Xtensa | esp-2022r1-RC1-11.2.0]",
+            "name": "ESP-IDF Windows [Xtensa | esp-2022r1-11.2.0]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++20",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -338,7 +365,7 @@
                 ],
                 "limitSymbolsToIncludedHeaders": false
             },
-            "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2022r1-RC1-11.2.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
+            "compilerPath": "${config:idf.toolsPathWin}/tools/xtensa-${config:idf.adapterTargetName}-elf/esp-2022r1-11.2.0/xtensa-${config:idf.adapterTargetName}-elf/bin/xtensa-${config:idf.adapterTargetName}-elf-gcc.exe",
             "compilerArgs": [
                 "-DIDF_TARGET=${config:idf.adapterTargetName}",
                 "-D__XTENSA__"
@@ -347,14 +374,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [RISCV32 | esp-2022r1-RC1-11.2.0]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++20",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -380,14 +407,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [RISCV32 | esp-2022r1-RC1-11.2.0]",
             "cStandard": "c11",
-            "cppStandard": "c++17",
+            "cppStandard": "c++20",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -415,14 +442,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [Xtensa | esp-2021r2-patch3-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -448,14 +475,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [Xtensa | esp-2021r2-patch3-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -483,14 +510,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [RISCV32 | esp-2021r2-patch3-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -516,14 +543,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [RISCV32 | esp-2021r2-patch3-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -551,14 +578,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [Xtensa | esp-2021r2-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -584,14 +611,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [Xtensa | esp-2021r2-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -619,14 +646,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [RISCV32 | esp-2021r2-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -652,14 +679,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [RISCV32 | esp-2021r2-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -687,14 +714,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [Xtensa | esp-2021r1-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -720,14 +747,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [Xtensa | esp-2021r1-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -755,14 +782,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [RISCV32 | esp-2021r1-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -788,14 +815,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [RISCV32 | esp-2021r1-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -823,14 +850,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__riscv"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [Xtensa | esp-2020r3-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -856,14 +883,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [Xtensa | esp-2020r3-8.4.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -891,14 +918,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [Xtensa | esp-2019r2-8.2.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -924,14 +951,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [Xtensa | esp-2019r2-8.2.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -959,14 +986,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF [Xtensa | 1.22.0-80-g6c4433a-5.2.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -992,14 +1019,14 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         },
         {
             "name": "ESP-IDF Windows [Xtensa | 1.22.0-80-g6c4433a-5.2.0]",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "forcedInclude": [
-                "${workspaceFolder}/build/config/sdkconfig.h"
+                "${env:forcedIncludePath}"
             ],
             "includePath": [
                 "${env:configAdditionalIncludePath}",
@@ -1027,7 +1054,7 @@
                 "IDF_TARGET=${config:idf.adapterTargetName}",
                 "__XTENSA__"
             ],
-            "intelliSenseMode": "gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86"
         }
     ],
     "version": 4
